@@ -3,9 +3,9 @@
 namespace ObjectivePHP\Package\Solarium\Middleware;
 
 
-use Fei\Gateway\Config\SolrClient;
 use ObjectivePHP\Application\ApplicationInterface;
 use ObjectivePHP\Application\Middleware\AbstractMiddleware;
+use ObjectivePHP\Package\Solarium\Config\SolrClient;
 use Solarium\Client;
 
 class SolariumInitializer extends AbstractMiddleware

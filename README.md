@@ -1,1 +1,1 @@
-# solarium-package
+# ObjectivePHP / Solarium Package

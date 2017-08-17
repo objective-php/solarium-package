@@ -28,7 +28,8 @@ class SolrClient extends SingleValueDirectiveGroup
      */
     public function __construct($identifier, $host, $core = null, $basePath = null, $port = null)
     {
-        $config = array_merge($this->value, array_filter(compact('host', 'core', 'basePath', 'port')));
+        if(is_array($host)) $config = $host;
+        else $config = array_merge($this->value, array_filter(compact('host', 'core', 'basePath', 'port')));
         $this->identifier = $identifier;
         $this->setValue($config);
 

@@ -15,7 +15,7 @@ class SolrClient extends SingleValueDirectiveGroup
 {
 
 
-    protected $value  = ['port' => '8983', 'base-path' => '/solr/'];
+    protected $value  = ['port' => '8983', 'base-path' => '/solr/', 'timeout' => 5];
 
 
     /**
@@ -129,5 +129,21 @@ class SolrClient extends SingleValueDirectiveGroup
 
         return $this;
     }
-
+    
+    /**
+     * Set SolR requests timeout (in seconds)
+     *
+     * @param $timeout
+     */
+    public function setTimeout($timeout)
+    {
+        $this->value['timeout'] = $timeout;
+        
+        return $this;
+    }
+    
+    public function getTimeout()
+    {
+        return $this->value['timeout'];
+    }
 }
